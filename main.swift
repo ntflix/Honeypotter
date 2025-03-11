@@ -199,5 +199,5 @@ guard let employees = dataLoader.loadEmployees() else {
 print("[INFO] Loaded \(employees.count) fake employees.")
 
 // Initialise and start the honeypot server (listening on all interfaces and port 2222)
-let honeypotServer = HoneypotServer(host: "0.0.0.0", port: 2222, employees: employees, maxAuthAttempts: maxAttempts)
+let honeypotServer = HoneypotServer(host: "127.0.0.1", port: 2222, employees: employees, maxAuthAttempts: maxAttempts)
 honeypotServer.start()
