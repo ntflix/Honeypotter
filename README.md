@@ -46,6 +46,22 @@ Once the server starts, it prints log messages to the console. It will:
 - Increment an authentication attempt counter when a message starting with `auth:` is received.
 - When the counter reaches the maximum set by `-maxAttempts`, the server sends back the fake employee data (as JSON) and logs the event.
 
+### Connecting to the Server
+
+You can connect to the server using `nc` or `telnet`:
+
+```bash
+nc localhost 2222
+```
+
+…or…
+
+```bash
+telnet localhost 2222
+```
+
+Then send data just by typing it in and hitting enter. E.g. `auth:blahblahiamahackerdotcom`.
+
 ## Notes
 
 The sample data file `sample_data.json` must be in the same directory as the executable (or adjust the file path in the code as needed).
